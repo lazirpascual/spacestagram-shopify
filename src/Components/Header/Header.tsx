@@ -22,7 +22,7 @@ const Header: React.FC = () => {
         </Typography>
       </div>
       <Typography variant="subtitle1" gutterBottom>
-        Presented by NASA’s Astronomy Picture of the Day (APOD) API
+        Brought to you by NASA’s Astronomy Picture of the Day (APOD) API
       </Typography>
       <Divider />
     </div>

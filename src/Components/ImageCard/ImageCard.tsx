@@ -58,11 +58,12 @@ const ImageCard: React.FC<Props> = ({ currentImage }) => {
             sx={{ height: 80 }}
           />
           <CardMedia
+            onClick={handleExpandClick}
             component="img"
             height="300"
             image={currentImage.url}
             alt={currentImage.title}
-            sx={{ marginBottom: 2 }}
+            sx={{ marginBottom: 2, cursor: "pointer" }}
           />
           <CardActions>
             <IconButton color="inherit" onClick={handleLikeClick}>
@@ -91,7 +92,7 @@ const ImageCard: React.FC<Props> = ({ currentImage }) => {
           </CardActions>
           <Collapse in={expanded} timeout="auto" unmountOnExit>
             <CardContent>
-              <Typography variant="body2" color="text.secondary">
+              <Typography variant="body2" color="text.secondary" align="left">
                 {currentImage.explanation}
               </Typography>
             </CardContent>

@@ -1,4 +1,4 @@
-# Spacetagram-Shopify
+# Spacestagram-Shopify
 
 ## Live Demo of [Spacestagram](https://shopify-spacestagram.netlify.app/)
 
@@ -18,6 +18,7 @@ This is a react application that pulls images from NASA's Astronomy Picture of t
 - Like/unlike each image
 - Show loading state while waiting to fetch from the API
 - Retreive shareable links for each image
+- Expand each image card to view image description
 
 ## ✎ Notes
 

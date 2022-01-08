@@ -14,23 +14,31 @@ function App() {
 
   useEffect(() => {
     const fetchData = async () => {
-      const imagesData = await fetchImagesData(8);
-      if (imagesData) {
-        setIsFetching(false);
+      try {
+        const imagesData = await fetchImagesData(8);
+        if (imagesData) {
+          setIsFetching(false);
+        }
+        setImagesList(imagesData);
+      } catch (error: any) {
+        console.log(error.message);
       }
-      setImagesList(imagesData);
     };
 
     fetchData();
   }, []);
 
   const handleLoadClick = async () => {
-    setIsFetchingButton(true);
-    const imagesData = await fetchImagesData(6);
-    if (imagesData) {
-      setIsFetchingButton(false);
+    try {
+      setIsFetchingButton(true);
+      const imagesData = await fetchImagesData(6);
+      if (imagesData) {
+        setIsFetchingButton(false);
+      }
+      setImagesList([...imagesList, ...imagesData]);
+    } catch (error: any) {
+      console.log(error.message);
     }
-    setImagesList([...imagesList, ...imagesData]);
   };
 
   return (
@@ -52,6 +60,7 @@ function App() {
           onClick={handleLoadClick}
           variant="outlined"
           sx={{ marginTop: 7, marginBottom: 9 }}
+          size="large"
         >
           Load More
         </Button>
