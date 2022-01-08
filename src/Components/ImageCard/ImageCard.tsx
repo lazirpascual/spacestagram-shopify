@@ -1,11 +1,11 @@
-import React from "react";
+import React, { Dispatch, SetStateAction, useState } from "react";
 import Card from "@mui/material/Card";
 import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
-import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import IconButton from "@mui/material/IconButton";
+import FavoriteIcon from "@mui/icons-material/Favorite";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import ShareIcon from "@mui/icons-material/Share";
 import { CurrentImage } from "../../Interfaces/Interface";
@@ -15,6 +15,12 @@ interface Props {
 }
 
 const ImageCard: React.FC<Props> = ({ currentImage }) => {
+  const [isLiked, setIsLiked] = useState<boolean>(false);
+
+  const handleLikeClick = () => {
+    setIsLiked(!isLiked);
+  };
+
   return (
     <div>
       {currentImage.media_type === "image" && (
@@ -25,20 +31,24 @@ const ImageCard: React.FC<Props> = ({ currentImage }) => {
             image={currentImage.url}
             alt={currentImage.title}
           />
-          <CardContent>
+          <CardContent sx={{ height: 80 }}>
             <Typography gutterBottom variant="h5" component="div">
-              {currentImage.title}{" "}
+              {currentImage.title}
             </Typography>
             <Typography gutterBottom variant="caption" component="div">
-              {currentImage.date}{" "}
+              {currentImage.date}
             </Typography>
             {/* <Typography variant="body2" color="text.secondary">
           {currentImage.explanation}
         </Typography> */}
           </CardContent>
           <CardActions>
-            <IconButton color="inherit">
-              <FavoriteBorderIcon />
+            <IconButton color="inherit" onClick={handleLikeClick}>
+              {!isLiked ? (
+                <FavoriteBorderIcon />
+              ) : (
+                <FavoriteIcon style={{ color: "red" }} />
+              )}
             </IconButton>
             <IconButton color="inherit">
               <ShareIcon />

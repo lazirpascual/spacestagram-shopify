@@ -7,12 +7,12 @@ import Button from "@mui/material/Button";
 import { CurrentImage } from "./Interfaces/Interface";
 
 function App() {
-  const [imagesList, setImagesData] = useState<CurrentImage[]>([]);
+  const [imagesList, setImagesList] = useState<CurrentImage[]>([]);
 
   useEffect(() => {
     const fetchData = async () => {
       const imagesData = await fetchImagesData(9);
-      setImagesData(imagesData);
+      setImagesList(imagesData);
     };
 
     fetchData();
@@ -20,7 +20,7 @@ function App() {
 
   const handleLoadClick = async () => {
     const imagesData = await fetchImagesData(6);
-    setImagesData([...imagesList, ...imagesData]);
+    setImagesList([...imagesList, ...imagesData]);
   };
 
   return (

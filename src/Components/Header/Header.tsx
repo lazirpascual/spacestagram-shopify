@@ -4,7 +4,7 @@ import { Typography } from "@mui/material";
 const Header: React.FC = () => {
   return (
     <div>
-      <Typography variant="h3" gutterBottom>
+      <Typography variant="h3" gutterBottom sx={{ marginTop: 3 }}>
         Spacestagram
       </Typography>
       <Typography variant="subtitle1" gutterBottom sx={{ marginBottom: 5 }}>

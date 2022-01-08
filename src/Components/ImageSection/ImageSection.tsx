@@ -1,5 +1,4 @@
-import React, { useState, useEffect } from "react";
-
+import React, { Dispatch, SetStateAction } from "react";
 import { CurrentImage } from "../../Interfaces/Interface";
 import ImageCard from "../ImageCard/ImageCard";
 import Grid from "@mui/material/Grid";
@@ -18,7 +17,7 @@ const ImageSection: React.FC<Props> = ({ imagesList }) => {
       alignItems="center"
     >
       {imagesList.map((currentImage, index) => (
-        <Grid item>
+        <Grid item key={index}>
           <ImageCard currentImage={currentImage} />
         </Grid>
       ))}

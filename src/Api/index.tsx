@@ -12,6 +12,7 @@ export const fetchImagesData = async (numImages: number) => {
       url: currentData.url,
       explanation: currentData.explanation,
       media_type: currentData.media_type,
+      like: false,
     };
   });
 
