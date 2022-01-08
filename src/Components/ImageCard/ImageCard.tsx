@@ -51,7 +51,7 @@ const ImageCard: React.FC<Props> = ({ currentImage }) => {
   return (
     <div>
       {currentImage.media_type === "image" && (
-        <Card sx={{ maxWidth: 400 }}>
+        <Card sx={{ width: 400 }}>
           <CardHeader
             title={currentImage.title}
             subheader={currentImage.date}
