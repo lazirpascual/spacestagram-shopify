@@ -20,14 +20,12 @@ This is a react application that pulls images from NASA's Astronomy Picture of t
 - Show loading state while waiting to fetch from the API
 - Retreive shareable links for each image
 - Expand each image card to view image description
-- Display any errors when fetching from the API
 
 ## ✎ Notes
 
 - This app was created in React using Typescript
 - Material-UI and CSS were used to style and design the application
 - Components were built to be as modularized and reusable as possible
-- Adequate error handling was implemented when fetching from the API
 - Unit tests were conducted through Jest and React-Testing-Libary
 
 # Application Progress
@@ -38,7 +36,6 @@ This is a react application that pulls images from NASA's Astronomy Picture of t
 - [x] Create header component
 - [x] Create image component (title, date, image, desciption)
 - [x] Create functions to fetch from API
-- [x] Add error handling when fetching from the API
 - [x] Identify and create state throughout the application
 - [x] Populate components using data from API
 - [x] Add responsiveness for all screen sizes
