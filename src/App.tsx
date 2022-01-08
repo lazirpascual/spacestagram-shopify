@@ -1,12 +1,12 @@
-import { Typography } from "@mui/material";
 import React from "react";
 import "./App.css";
 import ImageSection from "./Components/ImageSection/ImageSection";
+import Header from "./Components/Header/Header";
 
 function App() {
   return (
     <div className="App">
-      <Typography variant="h3">Spacestagram</Typography>
+      <Header />
       <ImageSection />
     </div>
   );
