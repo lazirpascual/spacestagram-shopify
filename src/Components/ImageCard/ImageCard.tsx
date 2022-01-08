@@ -1,4 +1,4 @@
-import React, { Dispatch, SetStateAction, useState } from "react";
+import React, { useState } from "react";
 import Card from "@mui/material/Card";
 import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
@@ -8,6 +8,7 @@ import IconButton from "@mui/material/IconButton";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import ShareIcon from "@mui/icons-material/Share";
+import Tooltip from "@mui/material/Tooltip";
 import { CurrentImage } from "../../Interfaces/Interface";
 
 interface Props {
@@ -24,14 +25,14 @@ const ImageCard: React.FC<Props> = ({ currentImage }) => {
   return (
     <div>
       {currentImage.media_type === "image" && (
-        <Card sx={{ width: 345, height: 350 }}>
+        <Card sx={{ width: 400, height: 400 }}>
           <CardMedia
             component="img"
-            height="180"
+            height="220"
             image={currentImage.url}
             alt={currentImage.title}
           />
-          <CardContent sx={{ height: 80 }}>
+          <CardContent sx={{ height: 90 }}>
             <Typography gutterBottom variant="h5" component="div">
               {currentImage.title}
             </Typography>
@@ -50,9 +51,18 @@ const ImageCard: React.FC<Props> = ({ currentImage }) => {
                 <FavoriteIcon style={{ color: "red" }} />
               )}
             </IconButton>
-            <IconButton color="inherit">
-              <ShareIcon />
-            </IconButton>
+            <Tooltip
+              title={<Typography fontSize={17}>Copy To Clipboard</Typography>}
+            >
+              <IconButton
+                color="inherit"
+                onClick={() => {
+                  navigator.clipboard.writeText(currentImage.url);
+                }}
+              >
+                <ShareIcon />
+              </IconButton>
+            </Tooltip>
           </CardActions>
         </Card>
       )}

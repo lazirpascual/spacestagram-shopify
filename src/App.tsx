@@ -14,7 +14,7 @@ function App() {
 
   useEffect(() => {
     const fetchData = async () => {
-      const imagesData = await fetchImagesData(9);
+      const imagesData = await fetchImagesData(8);
       if (imagesData) {
         setIsFetching(false);
       }
