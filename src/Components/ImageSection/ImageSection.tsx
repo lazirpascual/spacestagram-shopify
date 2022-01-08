@@ -1,4 +1,4 @@
-import React, { Dispatch, SetStateAction } from "react";
+import React from "react";
 import { CurrentImage } from "../../Interfaces/Interface";
 import ImageCard from "../ImageCard/ImageCard";
 import Grid from "@mui/material/Grid";
