@@ -3,6 +3,7 @@ interface CurrentImage {
   date: string;
   url: string;
   explanation: string;
+  media_type: string;
   like?: boolean;
 }
 

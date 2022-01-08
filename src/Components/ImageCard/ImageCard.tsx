@@ -5,7 +5,9 @@ import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
-import Grid from "@mui/material/Grid";
+import IconButton from "@mui/material/IconButton";
+import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
+import ShareIcon from "@mui/icons-material/Share";
 import { CurrentImage } from "../../Interfaces/Interface";
 
 interface Props {
@@ -14,29 +16,37 @@ interface Props {
 
 const ImageCard: React.FC<Props> = ({ currentImage }) => {
   return (
-    <Card sx={{ width: 345, height: 350 }}>
-      <CardMedia
-        component="img"
-        height="180"
-        image={currentImage.url}
-        alt={currentImage.title}
-      />
-      <CardContent>
-        <Typography gutterBottom variant="h5" component="div">
-          {currentImage.title}{" "}
-        </Typography>
-        <Typography gutterBottom variant="caption" component="div">
-          {currentImage.date}{" "}
-        </Typography>
-        {/* <Typography variant="body2" color="text.secondary">
+    <div>
+      {currentImage.media_type === "image" && (
+        <Card sx={{ width: 345, height: 350 }}>
+          <CardMedia
+            component="img"
+            height="180"
+            image={currentImage.url}
+            alt={currentImage.title}
+          />
+          <CardContent>
+            <Typography gutterBottom variant="h5" component="div">
+              {currentImage.title}{" "}
+            </Typography>
+            <Typography gutterBottom variant="caption" component="div">
+              {currentImage.date}{" "}
+            </Typography>
+            {/* <Typography variant="body2" color="text.secondary">
           {currentImage.explanation}
         </Typography> */}
-      </CardContent>
-      <CardActions>
-        <Button size="small">Like</Button>
-        <Button size="small">Share</Button>
-      </CardActions>
-    </Card>
+          </CardContent>
+          <CardActions>
+            <IconButton color="inherit">
+              <FavoriteBorderIcon />
+            </IconButton>
+            <IconButton color="inherit">
+              <ShareIcon />
+            </IconButton>
+          </CardActions>
+        </Card>
+      )}
+    </div>
   );
 };
 

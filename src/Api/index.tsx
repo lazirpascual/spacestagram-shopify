@@ -11,6 +11,7 @@ export const fetchImagesData = async (numImages: number) => {
       date: currentData.date,
       url: currentData.url,
       explanation: currentData.explanation,
+      media_type: currentData.media_type,
     };
   });
 
