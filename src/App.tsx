@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { fetchImagesData } from "./Api";
 import ImageSection from "./Components/ImageSection/ImageSection";
 import Header from "./Components/Header/Header";

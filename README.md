@@ -9,7 +9,8 @@ This is a react application that pulls images from NASA's Astronomy Picture of t
 | <img src="https://cdn.jsdelivr.net/npm/simple-icons@v4/icons/typescript.svg" width="40"> | <img src="https://cdn.jsdelivr.net/npm/simple-icons@v4/icons/react.svg" width="40"> | <img src="https://cdn.jsdelivr.net/npm/simple-icons@v4/icons/material-ui.svg" width="40"> |
 | :--------------------------------------------------------------------------------------: | :---------------------------------------------------------------------------------: | :---------------------------------------------------------------------------------------: |
 
-- **Front-End**: TypeScript, React, Material-UI </br>
+- **Front-End**: TypeScript, React, Material-UI
+- **Testing**: Jest, React-Testing-Library
 - **Deployment**: Netlify
 
 ## ⚙️ Features
@@ -25,6 +26,7 @@ This is a react application that pulls images from NASA's Astronomy Picture of t
 - This app was created in React using Typescript
 - Material-UI and CSS were used to style and design the application
 - Components were built to be as modularized and reusable as possible
+- Unit tests were conducted through Jest and React-Testing-Libary
 
 # Application Progress
 
@@ -32,9 +34,12 @@ This is a react application that pulls images from NASA's Astronomy Picture of t
 - [x] Split the UI into individual components
 - [x] Create and implement app using TypeScript
 - [x] Create header component
-- [x] Create image components (title, date, image, desciption)
+- [x] Create image component (title, date, image, desciption)
 - [x] Create functions to fetch from API
+- [x] Identify and create state throughout the application
+- [x] Populate components using data from API
 - [x] Add responsiveness for all screen sizes
+- [x] Add unit testing for functions and components
 - [x] Finish readme.md
 
 # Preview
