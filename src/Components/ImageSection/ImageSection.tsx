@@ -1,21 +1,14 @@
 import React, { useState, useEffect } from "react";
-import { fetchImagesData } from "../../Api";
+
 import { CurrentImage } from "../../Interfaces/Interface";
 import ImageCard from "../ImageCard/ImageCard";
 import Grid from "@mui/material/Grid";
 
-const ImageSection: React.FC = () => {
-  const [imagesData, setImagesData] = useState<CurrentImage[]>([]);
+interface Props {
+  imagesList: CurrentImage[];
+}
 
-  useEffect(() => {
-    const fetchData = async () => {
-      const data = await fetchImagesData(6);
-      setImagesData(data);
-    };
-
-    fetchData();
-  }, []);
-
+const ImageSection: React.FC<Props> = ({ imagesList }) => {
   return (
     <Grid
       container
@@ -24,7 +17,7 @@ const ImageSection: React.FC = () => {
       justifyContent="center"
       alignItems="center"
     >
-      {imagesData.map((currentImage, index) => (
+      {imagesList.map((currentImage, index) => (
         <Grid item>
           <ImageCard currentImage={currentImage} />
         </Grid>
