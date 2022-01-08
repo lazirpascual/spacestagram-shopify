@@ -14,7 +14,7 @@ interface Props {
 
 const ImageCard: React.FC<Props> = ({ currentImage }) => {
   return (
-    <Card sx={{ maxWidth: 345, height: 350 }}>
+    <Card sx={{ width: 345, height: 350 }}>
       <CardMedia
         component="img"
         height="180"

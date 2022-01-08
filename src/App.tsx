@@ -11,18 +11,27 @@ function App() {
 
   useEffect(() => {
     const fetchData = async () => {
-      const data = await fetchImagesData(6);
-      setImagesData(data);
+      const imagesData = await fetchImagesData(9);
+      setImagesData(imagesData);
     };
 
     fetchData();
   }, []);
 
+  const handleLoadClick = async () => {
+    const imagesData = await fetchImagesData(6);
+    setImagesData([...imagesList, ...imagesData]);
+  };
+
   return (
     <div className="App">
       <Header />
       <ImageSection imagesList={imagesList} />
-      <Button variant="outlined" sx={{ marginTop: 7 }}>
+      <Button
+        onClick={handleLoadClick}
+        variant="outlined"
+        sx={{ marginTop: 7, marginBottom: 9 }}
+      >
         Load More
       </Button>
     </div>
