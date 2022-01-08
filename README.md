@@ -1,46 +1,43 @@
-# Getting Started with Create React App
+# Spacetagram-Shopify
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Live Demo of [Spacestagram](https://shopify-spacestagram.netlify.app/)
 
-## Available Scripts
+This is a react application that pulls images from NASA's Astronomy Picture of the Day ([APOD](https://api.nasa.gov/#apod)) API, allowing users to "like" and "unlike" their favourite images. Made using TypeScript, React JS, and Material-UI. <br />
 
-In the project directory, you can run:
+## 🛠 Tech Stack
 
-### `npm start`
+| <img src="https://cdn.jsdelivr.net/npm/simple-icons@v4/icons/typescript.svg" width="40"> | <img src="https://cdn.jsdelivr.net/npm/simple-icons@v4/icons/react.svg" width="40"> | <img src="https://cdn.jsdelivr.net/npm/simple-icons@v4/icons/material-ui.svg" width="40"> |
+| :--------------------------------------------------------------------------------------: | :---------------------------------------------------------------------------------: | :---------------------------------------------------------------------------------------: |
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- **Front-End**: TypeScript, React, Material-UI </br>
+- **Deployment**: Netlify
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## ⚙️ Features
 
-### `npm test`
+- Display images from the APOD API
+- Like/unlike each image
+- Show loading state while waiting to fetch from the API
+- Retreive shareable links for each image
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## ✎ Notes
 
-### `npm run build`
+- This app was created in React using Typescript
+- Material-UI and CSS were used to style and design the application
+- Components were built to be as modularized and reusable as possible
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+# Application Progress
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- [x] Design the layout and UI of the application
+- [x] Split the UI into individual components
+- [x] Create and implement app using TypeScript
+- [x] Create header component
+- [x] Create image components (title, date, image, desciption)
+- [x] Create functions to fetch from API
+- [x] Add responsiveness for all screen sizes
+- [x] Finish readme.md
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+# Preview
 
-### `npm run eject`
+## 1. Main Page
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+![preview](https://i.imgur.com/rqQfyKL.png)

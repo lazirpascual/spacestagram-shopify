@@ -4,7 +4,6 @@ interface CurrentImage {
   url: string;
   explanation: string;
   media_type: string;
-  like?: boolean;
 }
 
 export { CurrentImage };
