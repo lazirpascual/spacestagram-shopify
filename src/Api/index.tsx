@@ -10,6 +10,7 @@ export const fetchImagesData = async (numImages: number) => {
       title: currentData.title,
       date: currentData.date,
       url: currentData.url,
+      hdurl: currentData.hdurl,
       explanation: currentData.explanation,
       media_type: currentData.media_type,
     };

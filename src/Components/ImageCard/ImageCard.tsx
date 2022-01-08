@@ -41,7 +41,7 @@ const ImageCard: React.FC<Props> = ({ currentImage }) => {
 
   const handleShareClick = () => {
     setTooltipText("Copied!");
-    navigator.clipboard.writeText(currentImage.url);
+    navigator.clipboard.writeText(currentImage.hdurl);
   };
 
   const handleExpandClick = () => {
