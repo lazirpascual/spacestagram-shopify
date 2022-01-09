@@ -15,13 +15,12 @@ const Header: React.FC = () => {
         />
         <Typography
           variant="h3"
-          gutterBottom
-          sx={{ marginTop: 2, marginRight: 4 }}
+          sx={{ marginTop: 2, marginRight: 4, marginBottom: 2 }}
         >
           Spacestagram
         </Typography>
       </div>
-      <Typography variant="subtitle1" gutterBottom>
+      <Typography variant="subtitle1" sx={{ marginBottom: 3 }}>
         Brought to you by NASA’s Astronomy Picture of the Day (APOD) API
       </Typography>
       <Divider />
